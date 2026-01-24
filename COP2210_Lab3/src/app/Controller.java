@@ -14,6 +14,7 @@ public class Controller {
     double value2 = 59.5;
     multipleNumbersIntAndDouble(value1, value2);
 
+
     calculateAreaOfTriangleWithOutput(36.3, 18.2);
 
     double base = 17.16332;
@@ -21,6 +22,12 @@ public class Controller {
     double width = 20.51723;
     System.out.printf("Triangle info-> %-11s base: %.3f %-8s height: %.5f %-3s area: %.2f\n", "", base, "", height, "", calculateAreaOfTriangle(base, height));
     System.out.printf("Rectangle info-> %-10s height: %.4f %-5s width: %.1f %-8s area: %.5f\n", "", height, "", width, "", calculateAreaOfRectangle(height, width));
+    System.out.println();
+    Helper.displayInfo();
+    double result = calculateAreaOfCircle(9.3) + calculateAreaOfRectangle(9.4, 17.2) + calculateAreaOfTriangle(21.5, 10.3);
+    System.out.printf("Value of result: %20f\n", result);
+    System.out.println();
+    Helper.complexArea(4, 12, 5);
   }
 
   public static void yourInfoHeader(String assignment) {
@@ -64,10 +71,10 @@ public class Controller {
   }
 
   public static void displaySingleResult(double value, String methodName) {
-    System.out.println("============================");
+    System.out.println("===============================");
     System.out.printf("%s\n", methodName);
-    System.out.println("============================");
-    System.out.printf("%-20s %.4f\n", "Value: ", value);
+    System.out.println("===============================");
+    System.out.printf("%-15s %.4f\n", "Value: ", value);
     System.out.println();
   }
 
@@ -75,11 +82,12 @@ public class Controller {
                                                  double secondNumber) {
 
     double result = firstNumber * secondNumber;
-    System.out.printf("Running multipleNumbersIntAndDouble -> %d, %f\n",
+    System.out.printf("Running multipleNumbersIntAndDouble -> %d, %.1f\n",
                       firstNumber, secondNumber);
     System.out.printf("\tfirstNumber: \t\t%d\n", firstNumber);
     System.out.printf("\tsecondNumber: \t\t%.1f\n", secondNumber);
-    System.out.printf("\tResult: \t\t%.1f\n", result);
+    System.out.printf("\tresult: \t\t%.1f\n", result);
+    System.out.println();
   }
 
   public static void calculateAreaOfTriangleWithOutput(double base, double height){
