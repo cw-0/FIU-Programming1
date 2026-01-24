@@ -13,6 +13,14 @@ public class Controller {
     int value1 = 5;
     double value2 = 59.5;
     multipleNumbersIntAndDouble(value1, value2);
+
+    calculateAreaOfTriangleWithOutput(36.3, 18.2);
+
+    double base = 17.16332;
+    double height = 20.172391;
+    double width = 20.51723;
+    System.out.printf("Triangle info-> %-11s base: %.3f %-8s height: %.5f %-3s area: %.2f\n", "", base, "", height, "", calculateAreaOfTriangle(base, height));
+    System.out.printf("Rectangle info-> %-10s height: %.4f %-5s width: %.1f %-8s area: %.5f\n", "", height, "", width, "", calculateAreaOfRectangle(height, width));
   }
 
   public static void yourInfoHeader(String assignment) {
@@ -72,6 +80,19 @@ public class Controller {
     System.out.printf("\tfirstNumber: \t\t%d\n", firstNumber);
     System.out.printf("\tsecondNumber: \t\t%.1f\n", secondNumber);
     System.out.printf("\tResult: \t\t%.1f\n", result);
+  }
+
+  public static void calculateAreaOfTriangleWithOutput(double base, double height){
+    double areaOfTriangle = .5 * (base * height);
+    displaySingleResult(areaOfTriangle, "calculateAreaOfTriangleWithOutput");
+  }
+
+  public static double calculateAreaOfTriangle(double base, double height){
+    return (.5 * (base * height));
+  }
+
+  public static double calculateAreaOfRectangle(double height, double width){
+    return (height * width);
   }
 
 } // END CONTROLLER
