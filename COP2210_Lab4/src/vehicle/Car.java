@@ -44,7 +44,7 @@ public class Car {
   public Car() {
     color = "Red";
     numberOfDoors = 2;
-    price = randomGenerator.nextDouble(MIN_PRICE, MAX_PRICE);
+    price = randomGenerator.nextDouble(MIN_PRICE, MAX_PRICE + 1);
     mileage = 0;
     carID = "VIN" + '-' + CAR_FACTORY_ID + '-' + vehicleCounter;
     factory = CAR_FACTORY_ID;

@@ -11,29 +11,20 @@ public class Controller {
 
         yourInfoHeader("Lab 4");
 
-        List<Car> carList = new ArrayList<>();
-
-        Car.classDisplayInfo();
         Car c1 = new Car();
-        carList.add(c1);
-
+        c1.displayInfo();
         Car.classDisplayInfo();
+
         Car c2 = new Car("White", 4);
-        carList.add(c2);
+        c2.displayInfo();
 
-        Car.classDisplayInfo();
         Car c3 = new Car("Black", 2);
-        carList.add(c3);
+        c3.displayInfo();
 
-        Car.classDisplayInfo();
         Car c4 = new Car("Blue", 4, 38500, 10432);
-        carList.add(c4);
+        c4.displayInfo();
 
-        Car.classDisplayInfo();
 
-        for (Car car:carList){
-            car.displayInfo();
-        }
 
 
         System.out.println("------------------------------");
