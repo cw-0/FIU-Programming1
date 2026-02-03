@@ -10,15 +10,15 @@ import java.util.Random;
 
 public class Car {
 
-  //-------------------
+  // -------------------
   // class variables
-  //-------------------
+  // -------------------
 
   private static int vehicleCounter = 2000;
   public static final Random randomGenerator = new Random();
-  //-------------------
+  // -------------------
   // instance variables
-  //-------------------
+  // -------------------
 
   private String carID;
   private String color;
@@ -28,18 +28,16 @@ public class Car {
   private int mileage;
   public String doYouLikeIt;
 
-  //-------------------
+  // -------------------
   // CONSTANTS
-  //-------------------
+  // -------------------
   private static final String CAR_FACTORY_ID = "Norwood";
   final double MIN_PRICE = 35000;
   final double MAX_PRICE = 45000;
 
-
-
-  //-------------------
+  // -------------------
   // constructors
-  //-------------------
+  // -------------------
 
   public Car() {
     color = "Red";
@@ -66,48 +64,34 @@ public class Car {
     this.mileage = mileage;
   }
 
-  //-------------------
+  // -------------------
   // getters & setters
-  //-------------------
-  public static int getVehicleCounter() {
-    return vehicleCounter;
-  }
+  // -------------------
+  public static int getVehicleCounter() { return vehicleCounter; }
 
   public static void setVehicleCounter(int vehicleCounter) {
     Car.vehicleCounter = vehicleCounter;
   }
 
-  public String getCarId() {
-    return carID;
-  }
+  public String getCarId() { return carID; }
 
-  public String getColor() {
-    return color;
-  }
+  public String getColor() { return color; }
 
-  public void setColor(String color) {
-    this.color = color;
-  }
+  public void setColor(String color) { this.color = color; }
 
-  public String getFactory() {
-    return CAR_FACTORY_ID;
-  }
+  public String getFactory() { return CAR_FACTORY_ID; }
 
-  public int getNumberOfDoors() {
-    return numberOfDoors;
-  }
+  public int getNumberOfDoors() { return numberOfDoors; }
 
   public void setNumberOfDoors(int numberOfDoors) {
     this.numberOfDoors = numberOfDoors;
   }
 
-  public double getPrice() {
-    return price;
-  }
+  public double getPrice() { return price; }
 
-  //-------------------
-  //  class utils
-  //-------------------
+  // -------------------
+  // class utils
+  // -------------------
 
   public static void classDisplayInfo() {
     System.out.println("------------------------------");
@@ -129,7 +113,6 @@ public class Car {
     System.out.printf("%-25s %-15d\n", "Mileage:", this.mileage);
     System.out.printf("%-25s $%-15.2f\n", "Price:", this.price);
     System.out.printf("%-25s %-15s\n", "Do you like it:", this.doYouLikeIt);
-
   }
 
 } // END OF CAR
