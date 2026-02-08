@@ -1,5 +1,6 @@
 package app;
 
+import building.House;
 import buildingunit.Room;
 import cooling.AC;
 
@@ -17,6 +18,41 @@ public class Controller {
     livingRoom.roomStats("");
     bathroom.roomStats("");
     bedroom.roomStats("");
+
+    House myHouse = new House(kitchen, livingRoom, bedroom, bathroom);
+    myHouse.displayInfo();
+
+    System.out.println("-------------------------------");
+    System.out.println("What is the house's total square feet: " +
+                       myHouse.getHouseSquareFeet());
+    System.out.println("-------------------------------");
+
+    AC.acStats();
+
+    System.out.println("-------------------------------");
+    System.out.println("Call by Value ");
+    System.out.println("-------------------------------");
+    System.out.println();
+
+    AC.changeTemperatureDown(livingRoom.getTemperature(), 5);
+    livingRoom.roomStats("");
+
+    AC.changeTemperatureDown(myHouse.getKitchen().getTemperature(), 3);
+    myHouse.getKitchen().roomStats("");
+    AC.acStats();
+
+    System.out.println("-------------------------------");
+    System.out.println("Call by Reference ");
+    System.out.println("-------------------------------");
+    System.out.println();
+
+    AC.changeTemperatureDown(livingRoom, 5);
+    livingRoom.roomStats("");
+
+    AC.changeTemperatureDown(myHouse.getKitchen(), 3);
+    myHouse.getKitchen().roomStats("");
+
+    AC.acStats();
 
   } // End of Main
 } // End of Class Controller

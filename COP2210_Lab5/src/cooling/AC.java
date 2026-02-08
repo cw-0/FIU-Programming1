@@ -33,7 +33,7 @@ public class AC {
     numberOfChangedTemperatures++;
   }
 
-  public static void changTemperatureDown(Room room, double byUnits) {
+  public static void changeTemperatureDown(Room room, double byUnits) {
     System.out.println("---------------");
     System.out.println("Running AC changeTemperatureDown -> with object");
     System.out.println("---------------");
@@ -48,7 +48,7 @@ public class AC {
     numberOfChangedTemperatures++;
   }
 
-  public static void changTemperatureUp(Room room, double byUnits) {
+  public static void changeTemperatureUp(Room room, double byUnits) {
     System.out.println("---------------");
     System.out.println("Running AC changeTemperatureUp -> with object");
     System.out.println("---------------");
